@@ -2,19 +2,32 @@ import math
 
 
 def log(number):
-    # Switched to try-except bc exceptions should be rare so this is faster than testing the conditional every time
-    # try:
-    #     return math.log(number)
-    # except ValueError:
-    #     if number == 0:
-    #         return float('-inf')
-    #     else:
-    #         raise
+    """
+    Returns math.log(number) unless number == 0, in which case returns float('-inf').
+    
+    :rtype: float
+    """
     if number == 0:
         return float('-inf')
     else:
         return math.log(number)
 
+    
+def telog(number):
+    """
+    Returns math.log(number) unless number == 0, in which case returns float('-inf').
+    
+    When the exceptional case is truly exceptional, this can be faster than testing the conditional.
+    
+    :rtype: float
+    """
+    try:
+        return math.log(number)
+    except ValueError:
+        if number == 0:
+            return float('-inf')
+        else:
+            raise
 
 
 def logsumexp(iterable_of_floats):
