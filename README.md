@@ -1,4 +1,5 @@
-# congenial-octo-doodle (a.k.a. Howcroft's Python Utilities)
+HapPy Utilities
+===============
 
 Remote repo for backing up helpful utilities, often based on common idioms or recipes.
 
