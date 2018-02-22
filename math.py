@@ -1,5 +1,7 @@
 import math
 
+FLOAT_NEG_INF = float("-inf")
+
 
 def log(number):
     """
@@ -8,7 +10,7 @@ def log(number):
     :rtype: float
     """
     if number == 0:
-        return float('-inf')
+        return FLOAT_NEG_INF
     else:
         return math.log(number)
 
@@ -25,7 +27,7 @@ def telog(number):
         return math.log(number)
     except ValueError:
         if number == 0:
-            return float('-inf')
+            return FLOAT_NEG_INF
         else:
             raise
 
