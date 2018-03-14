@@ -1,8 +1,16 @@
 import math
+import numpy as np
 
 FLOAT_NEG_INF = float("-inf")
 
 
+def clip_logprob(logprob):
+    if np.isnan(logprob):
+        return -709
+    else:
+        return logprob
+    
+    
 def log(number):
     """
     Returns math.log(number) unless number == 0, in which case returns float('-inf').
