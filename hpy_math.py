@@ -53,6 +53,6 @@ def log_add(log_a, log_b):
     Simplified version of logsumexp for when you only have two values to work with.
     """
     if log_a > log_b:
-        return log_a + (1 + math.exp(log_b - log_a))
+        return log_a + log(1 + math.exp(log_b - log_a))
     else:
-        return log_b + (1 + math.exp(log_a - log_b))
+        return log_b + log(1 + math.exp(log_a - log_b))
